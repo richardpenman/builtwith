@@ -119,7 +119,7 @@ def contains_dict(d1, d2):
     return True
 
 
-def load_apps(filename='apps.json'):
+def load_apps(filename='apps.json.py'):
     """Load apps from Wappalyzer JSON (https://github.com/ElbertF/Wappalyzer)
     """
     # get the path of this filename relative to the current script
