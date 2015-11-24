@@ -6,7 +6,7 @@ def read(filename):
 
 setup(
     name='builtwith', 
-    version='1.3.1',
+    version='1.3.2',
     packages=['builtwith'],
     package_dir={'builtwith' : '.'}, # look for package contents in current directory
     author='Richard Penman',

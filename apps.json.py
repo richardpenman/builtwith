@@ -1045,7 +1045,7 @@
 				"Python",
 				"Solr",
 				"Java",
-				"PostgreSQL\\;confidence:80"
+				"PostgreSQL"
 			],
 			"website": "ckan.org/"
 		},
@@ -2434,7 +2434,7 @@
 			"headers": {
 				"X-Powered-By": "HHVM/?([\\d.]+)?\\;version:\\1"
 			},
-			"implies": "PHP\\;confidence:50",
+			"implies": "PHP",
 			"website": "hhvm.com"
 		},
 		"HP": {
@@ -2545,7 +2545,7 @@
 			"cats": [
 				12
 			],
-			"env": "^head$\\;confidence:50",
+			"env": "^head$",
 			"html": "<[^>]*data-headjs-load",
 			"script": "head\\.(?:core|load)(?:\\.min)?\\.js",
 			"website": "headjs.com"
@@ -3034,7 +3034,7 @@
 			"headers": {
 				"X-Content-Encoded-By": "Joomla! ([\\d.]+)\\;version:\\1"
 			},
-			"html": "(?:<div[^>]+id=\"wrapper_r\"|<[^>]+(?:feed|components)/com_|<table[^>]+class=\"pill)\\;confidence:50",
+			"html": "(?:<div[^>]+id=\"wrapper_r\"|<[^>]+(?:feed|components)/com_|<table[^>]+class=\"pill)",
 			"implies": "PHP",
 			"meta": {
 				"generator": "Joomla!(?: ([\\d.]+))?\\;version:\\1"
@@ -3493,11 +3493,11 @@
 				39
 			],
 			"meta": {
-				"author": "MOBOTIX AG\\;confidence:40",
-				"copyright": "MOBOTIX AG\\;confidence:40",
-				"publisher": "MOBOTIX AG\\;confidence:40"
+				"author": "MOBOTIX AG",
+				"copyright": "MOBOTIX AG",
+				"publisher": "MOBOTIX AG"
 			},
-			"url": "control/userimage\\.html\\;confidence:70",
+			"url": "control/userimage\\.html",
 			"website": "mobotix.com"
 		},
 		"MODx": {
@@ -3511,7 +3511,7 @@
 			},
 			"html": [
 				"<a[^>]+>Powered by MODx</a>",
-				"<(?:link|script)[^>]+assets/snippets/\\;confidence:20"
+				"<(?:link|script)[^>]+assets/snippets/"
 			],
 			"implies": "PHP",
 			"website": "modxcms.com"
@@ -3530,7 +3530,7 @@
 			],
 			"env": "^(?:Mage|VarienForm)$",
 			"headers": {
-				"Set-Cookie": "frontend=\\;confidence:50"
+				"Set-Cookie": "frontend="
 			},
 			"implies": "PHP",
 			"script": [
@@ -3657,7 +3657,7 @@
 			"cats": [
 				1
 			],
-			"env": "^eidosBase$\\;confidence:99",
+			"env": "^eidosBase$",
 			"html": "<!-- Methode uuid: \"[a-f\\d]+\" ?-->",
 			"meta": {
 				"eomportal-id": "\\d+",
@@ -3675,10 +3675,10 @@
 			"headers": {
 				"Set-Cookie": "ASPSESSION|ASP\\.NET_SessionId",
 				"X-AspNet-Version": "(.+)\\;version:\\1",
-				"X-Powered-By": "ASP\\.NET\\;confidence:50"
+				"X-Powered-By": "ASP\\.NET"
 			},
 			"html": "<input[^>]+name=\"__VIEWSTATE",
-			"implies": "IIS\\;confidence:50",
+			"implies": "IIS",
 			"url": "\\.aspx(?:$|\\?)",
 			"website": "www.asp.net"
 		},
@@ -4102,7 +4102,7 @@
 				1,
 				6
 			],
-			"html": "<link[^>]* href=[^>]+/web/css/(?:web\\.assets_common/|website\\.assets_frontend/)\\;confidence:25",
+			"html": "<link[^>]* href=[^>]+/web/css/(?:web\\.assets_common/|website\\.assets_frontend/)",
 			"implies": [
 				"Python",
 				"PostgreSQL",
@@ -4112,7 +4112,7 @@
 			"meta": {
 				"generator": "Odoo"
 			},
-			"script": "/web/js/(?:web\\.assets_common/|website\\.assets_frontend/)\\;confidence:25",
+			"script": "/web/js/(?:web\\.assets_common/|website\\.assets_frontend/)",
 			"website": "odoo.com"
 		},
 		"OmniTouch 8660 My Teamwork": {
@@ -4406,9 +4406,9 @@
 				27
 			],
 			"headers": {
-				"Server": "php/?([\\d.]+)?\\;confidence:40\\;version:\\1",
+				"Server": "php/?([\\d.]+)?",
 				"Set-Cookie": "PHPSESSID",
-				"X-Powered-By": "php/?([\\d.]+)?\\;confidence:40\\;version:\\1"
+				"X-Powered-By": "php/?([\\d.]+)?"
 			},
 			"url": "\\.php(?:$|\\?)",
 			"website": "php.net"
@@ -4736,7 +4736,7 @@
 				27
 			],
 			"headers": {
-				"Server": "(?:^|\\s)Python(?:/([\\d.]+))?\\;confidence:50\\;version:\\1"
+				"Server": "(?:^|\\s)Python(?:/([\\d.]+))?"
 			},
 			"website": "python.org"
 		},
@@ -4957,7 +4957,7 @@
 			],
 			"implies": [
 				"PHP",
-				"SQLite\\;confidence:50"
+				"SQLite"
 			],
 			"meta": {
 				"generator": "^RiteCMS(?: (.+))?\\;version:\\1"
@@ -5005,21 +5005,21 @@
 				18
 			],
 			"headers": {
-				"Server": "(?:mod_rails|mod_rack|Phusion(?:\\.|_)Passenger)\\;confidence:50",
-				"X-Powered-By": "(?:mod_rails|mod_rack|Phusion[\\._ ]Passenger)(?: \\(mod_rails/mod_rack\\))?(?: ?/?([\\d\\.]+))?\\;version:\\1\\;confidence:50"
+				"Server": "(?:mod_rails|mod_rack|Phusion(?:\\.|_)Passenger)",
+				"X-Powered-By": "(?:mod_rails|mod_rack|Phusion[\\._ ]Passenger)(?: \\(mod_rails/mod_rack\\))?(?: ?/?([\\d\\.]+))?"
 			},
 			"implies": "Ruby",
 			"meta": {
-				"csrf-param": "authenticity_token\\;confidence:50"
+				"csrf-param": "authenticity_token"
 			},
-			"script": "/assets/application-[a-z\\d]{32}/\\.js\\;confidence:50",
+			"script": "/assets/application-[a-z\\d]{32}/\\.js",
 			"website": "rubyonrails.org"
 		},
 		"RxJS": {
 			"cats": [
 				12
 			],
-			"env": "^Rx$\\;confidence:20",
+			"env": "^Rx$",
 			"script": "rx(?:\\.\\w+)?(?:\\.compat)?(?:\\.min)?\\.js",
 			"website": "reactive-extensions.github.io/RxJS/"
 		},
@@ -5192,7 +5192,7 @@
 				18
 			],
 			"html": [
-				"(?:<div class=\"ui\\s[^>]+\">)\\;confidence:30",
+				"(?:<div class=\"ui\\s[^>]+\">)",
 				"(?:<link[^>]+semantic(?:\\.css|\\.min\\.css)\">)"
 			],
 			"script": "(?:semantic(?:\\.js|\\.min\\.js))",
@@ -5292,7 +5292,7 @@
 			"env": "^shptUrl$",
 			"html": [
 				"<body class=\"shopatron",
-				"<img[^>]+mediacdn\\.shopatron\\.com\\;confidence:50"
+				"<img[^>]+mediacdn\\.shopatron\\.com"
 			],
 			"meta": {
 				"keywords": "Shopatron"
@@ -5539,7 +5539,7 @@
 			],
 			"html": "<p class=\"footer\">&copy; [-\\d]+ Splunk Inc\\.(?: Splunk ([\\d\\.]+( build [\\d\\.]*\\d)?))?[^<]*</p>\\;version:\\1",
 			"meta": {
-				"author": "Splunk Inc\\;confidence:50"
+				"author": "Splunk Inc"
 			},
 			"website": "splunk.com"
 		},
@@ -5982,7 +5982,7 @@
 			"cats": [
 				18
 			],
-			"env": "^Twipsy$\\;confidence:50",
+			"env": "^Twipsy$",
 			"html": [
 				"<style>/\\*!\\* Bootstrap v(\\d\\.\\d\\.\\d)\\;version:\\1",
 				"<link[^>]+?href=\"[^\"]+bootstrap(?:\\.min)?\\.css",
@@ -6012,7 +6012,7 @@
 				12
 			],
 			"env": "^typeahead$",
-			"implies": "jQuery\\;confidence:50",
+			"implies": "jQuery",
 			"script": "(typeahead|bloodhound)(\\.jquery|\\.bundle)?(\\.min)?\\.js",
 			"website": "twitter.github.io/typeahead.js"
 		},
@@ -6299,7 +6299,7 @@
 			"script": [
 				"vue(?:\\-|\\.)([\\d.]*\\d)[^/]*\\.js\\;version:\\1",
 				"/([\\d.]+)/vue(\\.min)?\\.js\\;version:\\1",
-				"vue.*\\.js\\;confidence:20"
+				"vue.*\\.js"
 			],
 			"website": "vuejs.org"
 		},
@@ -6610,7 +6610,7 @@
 			"cats": [
 				22
 			],
-			"html": "<title>XAMPP( Version ([\\d\\.]+))?</title>\\;version:\\1\\;confidence:90",
+			"html": "<title>XAMPP( Version ([\\d\\.]+))?</title>\\;version:\\1",
 			"implies": [
 				"Apache",
 				"MySQL",
@@ -6618,7 +6618,7 @@
 				"Perl"
 			],
 			"meta": {
-				"author": "Kai Oswald Seidler\\;confidence:10"
+				"author": "Kai Oswald Seidler"
 			},
 			"website": "www.apachefriends.org/en/xampp.html"
 		},
@@ -6831,9 +6831,9 @@
 			"env": "^zbxCallPostScripts$",
 			"html": "<body[^>]+zbxCallPostScripts",
 			"meta": {
-				"Author": "ZABBIX SIA\\;confidence:70"
+				"Author": "ZABBIX SIA"
 			},
-			"url": "\\/zabbix\\/\\;confidence:30",
+			"url": "\\/zabbix\\/",
 			"website": "zabbix.com"
 		},
 		"Zanox": {
@@ -7076,7 +7076,7 @@
 				22
 			],
 			"headers": {
-				"Set-Cookie": "Fe26\\.2\\*\\*\\;confidence:50"
+				"Set-Cookie": "Fe26\\.2\\*\\*"
 			},
 			"implies": "node.js",
 			"website": "hapijs.com"
@@ -7279,7 +7279,7 @@
 				"X-Powered-By": "mod_rack(?:/([\\d.]+))?\\;version:\\1"
 			},
 			"implies": [
-				"Ruby on Rails\\;confidence:50",
+				"Ruby on Rails",
 				"Apache"
 			],
 			"website": "phusionpassenger.com"
@@ -7293,7 +7293,7 @@
 				"X-Powered-By": "mod_rails(?:/([\\d.]+))?\\;version:\\1"
 			},
 			"implies": [
-				"Ruby on Rails\\;confidence:50",
+				"Ruby on Rails",
 				"Apache"
 			],
 			"website": "phusionpassenger.com"
@@ -7317,7 +7317,7 @@
 				"X-Powered-By": "mod_wsgi(?:/([\\d.]+))?\\;version:\\1"
 			},
 			"implies": [
-				"Python\\;confidence:50",
+				"Python",
 				"Apache"
 			],
 			"website": "code.google.com/p/modwsgi"
@@ -7443,7 +7443,7 @@
 			],
 			"implies": [
 				"PHP",
-				"SQLite\\;confidence:50"
+				"SQLite"
 			],
 			"meta": {
 				"generator": "^phpSQLiteCMS(?: (.+))?$\\;version:\\1"
