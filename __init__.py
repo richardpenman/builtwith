@@ -1,9 +1,13 @@
+import six
 import sys
 import os
 import re
 import json
-import urllib2
 
+if six.PY2:
+    import urllib2
+else:
+    import urllib.request as urllib2
 
 
 def builtwith(url, headers=None, html=None, user_agent='builtwith'):
@@ -34,15 +38,14 @@ def builtwith(url, headers=None, html=None, user_agent='builtwith'):
             request = urllib2.Request(url, None, {'User-Agent': user_agent})
             if html:
                 # already have HTML so just need to make HEAD request for headers
-                request.get_method = lambda : 'HEAD'
+                request.get_method = lambda: 'HEAD'
             response = urllib2.urlopen(request)
             if headers is None:
                 headers = response.headers
             if html is None:
                 html = response.read()
-        except Exception, e:
-            print 'Error:', e
-            request = None
+        except Exception as e:
+            print('Error:', e)
 
     # check headers
     if headers:
@@ -65,6 +68,8 @@ def builtwith(url, headers=None, html=None, user_agent='builtwith'):
 
         # check meta
         # XXX add proper meta data parsing
+        if six.PY3 and isinstance(html, bytes):
+            html = html.decode()
         metas = dict(re.compile('<meta[^>]*?name=[\'"]([^>]*?)[\'"][^>]*?content=[\'"]([^>]*?)[\'"][^>]*?>', re.IGNORECASE).findall(html))
         for app_name, app_spec in data['apps'].items():
             for name, content in app_spec.get('meta', {}).items():
@@ -75,7 +80,6 @@ def builtwith(url, headers=None, html=None, user_agent='builtwith'):
                 
     return techs
 parse = builtwith
-
 
 
 def add_app(techs, app_name, app_spec):
@@ -102,6 +106,8 @@ def get_categories(app_spec):
 def contains(v, regex):
     """Removes meta data from regex then checks for a regex match
     """
+    if six.PY3 and isinstance(v, bytes):
+        v = v.decode()
     return re.compile(regex.split('\\;')[0], flags=re.IGNORECASE).search(v)
 
 
@@ -135,6 +141,6 @@ if __name__ == '__main__':
         for url in urls:
             results = builtwith(url)
             for result in sorted(results.items()):
-                print '%s: %s' % result
+                print('%s: %s' % result)
     else:
-        print 'Usage: %s url1 [url2 url3 ...]' % sys.argv[0]
+        print('Usage: %s url1 [url2 url3 ...]' % sys.argv[0])
