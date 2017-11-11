@@ -14,5 +14,6 @@ setup(
     description='Detect the technology used by a website, such as Apache, JQuery, and Wordpress.',
     long_description=read('README.rst'),
     url='https://bitbucket.org/richardpenman/builtwith',
-    license='lgpl'
+    license='lgpl',
+    install_requires=['six'],
 )
