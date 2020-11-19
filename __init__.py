@@ -108,7 +108,21 @@ def contains(v, regex):
     """
     if six.PY3 and isinstance(v, bytes):
         v = v.decode()
-    return re.compile(regex.split('\\;')[0], flags=re.IGNORECASE).search(v)
+    if len(v) > 870000:
+        string_len = len(v)
+        part_size = string_len // 1000
+        step = part_size
+        for _ in range(string_len // part_size):
+            part = v[:step]
+            v = v[step - 1:]
+            step += part_size
+            if step > string_len:
+                break
+            res = re.compile(regex.split('\\;')[0], flags=re.IGNORECASE).search(part)
+            if res:
+                return res
+    else:
+        return re.compile(regex.split('\\;')[0], flags=re.IGNORECASE).search(v)
 
 
 def contains_dict(d1, d2):
@@ -136,6 +150,8 @@ data = load_apps()
 
 
 if __name__ == '__main__':
+    print(builtwith('https://wordpress.com'))
+    print(builtwith('https://poets.org'))
     urls = sys.argv[1:]
     if urls:
         for url in urls:
