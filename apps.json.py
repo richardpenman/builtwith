@@ -237,6 +237,17 @@
 			"script": "(?:wh(?:utils|ver|proxy|lang|topic|msg)|ehlpdhtm)\\.js",
 			"website": "adobe.com/products/robohelp.html"
 		},
+		"Adobe Portfolio": {
+			"cats": [
+				1,
+				11
+			],
+			"html": "<link[^>]* href=\"(.*).myportfolio.com(.*)\"",
+			"meta": {
+				"generator": "Adobe Portfolio"
+			},
+			"cms": "test"
+		},
 		"Advanced Web Stats": {
 			"cats": [
 				10
