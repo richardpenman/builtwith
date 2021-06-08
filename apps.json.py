@@ -239,14 +239,12 @@
 		},
 		"Adobe Portfolio": {
 			"cats": [
-				1,
-				11
+				1
 			],
 			"html": "<link[^>]* href=\"(.*).myportfolio.com(.*)\"",
 			"meta": {
 				"generator": "Adobe Portfolio"
-			},
-			"cms": "test"
+			}
 		},
 		"Advanced Web Stats": {
 			"cats": [
@@ -7628,6 +7626,15 @@
 				"generator": "webEdition"
 			},
 			"website": "webedition.de/en"
+		},
+		"Webflow": {
+			"cats": [
+				1
+			],
+			"html": "<link[^>]* href=\"(.*).webflow.com(.*)\"",
+			"meta": {
+				"generator": "Webflow"
+			}
 		},
 		"webpack": {
 			"cats": [
