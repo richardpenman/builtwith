@@ -237,6 +237,15 @@
 			"script": "(?:wh(?:utils|ver|proxy|lang|topic|msg)|ehlpdhtm)\\.js",
 			"website": "adobe.com/products/robohelp.html"
 		},
+		"Adobe Portfolio": {
+			"cats": [
+				1
+			],
+			"html": "<link[^>]* href=\"(.*).myportfolio.com(.*)\"",
+			"meta": {
+				"generator": "Adobe Portfolio"
+			}
+		},
 		"Advanced Web Stats": {
 			"cats": [
 				10
@@ -7617,6 +7626,15 @@
 				"generator": "webEdition"
 			},
 			"website": "webedition.de/en"
+		},
+		"Webflow": {
+			"cats": [
+				1
+			],
+			"html": "<link[^>]* href=\"(.*).webflow.com(.*)\"",
+			"meta": {
+				"generator": "Webflow"
+			}
 		},
 		"webpack": {
 			"cats": [
