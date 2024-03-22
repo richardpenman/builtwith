@@ -1,1 +1,1 @@
-include README.rst src/apps.json
+include README.rst builtwith/apps.json

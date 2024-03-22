@@ -10,8 +10,8 @@ setup(
     name="builtwith",
     version="1.4.0",
     packages=["builtwith"],
-    package_dir={"builtwith": "src"},  # look for package contents in current directory
-    data_files=[("builtwith", ["src/apps.json"])],
+    package_dir={"builtwith": "builtwith"},  # look for package contents in current directory
+    data_files=[("builtwith", ["builtwith/apps.json"])],
     author="Richard Penman",
     author_email="richard.penman@gmail.com",
     description="Detect the technology used by a website\
