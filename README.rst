@@ -27,4 +27,3 @@ Install
 .. sourcecode:: bash
 
     pip install builtwith
-    pip install -r requirements.txt
