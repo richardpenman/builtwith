@@ -19,4 +19,12 @@ setup(
     long_description=read("README.rst"),
     url="https://github.com/richardpenman/builtwith",
     license="lgpl",
+    classifiers=[
+        "Environment :: Web Environment",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+    ],
 )
