@@ -5,6 +5,20 @@ import sys
 import urllib.request
 
 
+def decode_bytes(data):
+    """Decode bytes to string, trying multiple common encodings"""
+    if not isinstance(data, bytes):
+        return data
+    
+    for encoding in ['utf-8', 'iso-8859-1', 'windows-1252', 'latin-1']:
+        try:
+            return data.decode(encoding)
+        except (UnicodeDecodeError, AttributeError):
+            continue
+    # If all encodings fail, use utf-8 with error replacement
+    return data.decode('utf-8', errors='replace')
+
+
 def builtwith(url, headers=None, html=None, user_agent="builtwith"):
     """Detect the technology used to build a website"""
     techs = {}
@@ -52,7 +66,7 @@ def builtwith(url, headers=None, html=None, user_agent="builtwith"):
         # check meta
         # XXX add proper meta data parsing
         if isinstance(html, bytes):
-            html = html.decode()
+            html = decode_bytes(html)
         regex = re.compile(
             "<meta[^>]*?name=['\"]([^>]*?)['\"][^>]*?content=['\"]([^>]*?)['\"][^>]*?>",
             re.IGNORECASE
@@ -92,8 +106,7 @@ def get_categories(app_spec):
 
 def contains(v, regex):
     """Removes meta data from regex then checks for a regex match"""
-    if isinstance(v, bytes):
-        v = v.decode()
+    v = decode_bytes(v)
     return re.compile(regex.split("\\;")[0], flags=re.IGNORECASE).search(v)
 
 
